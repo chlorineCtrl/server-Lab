@@ -1,0 +1,18 @@
+{
+  "1": {
+    "name": "Gaming",
+    "rate": "96%"
+  },
+  "2": {
+    "name": "Sleeping",
+    "rate": "80%"
+  },
+  "3": {
+    "name": "Illustrator",
+    "rate": "75%"
+  },
+  "4": {
+    "name": "Photography",
+    "rate": "20%"
+  }
+}

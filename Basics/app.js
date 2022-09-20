@@ -1,5 +1,6 @@
 const express = require("express"); //Includes the express library
 const app = express(); //Creates an Express Application
+const router = require("./router");
 const port = 3000;
 
 /*** 
@@ -14,9 +15,16 @@ copy(), delete(), get(), head(), merge(), options(), patch(), post(), put(), etc
 There is a special routing method, app.all(), which will be called in 
 response to any HTTP method.
 ***/
-app.get("/", function (req, res) {
-  res.send("Hello World!");
-});
+// app.get("/", function (req, res) {
+//   res.send("Hello World!");
+// });
+app.use(express.static("public"));
+
+app.set("view engine", "ejs"); // Setting EJS as template engine
+
+app.set("views", __dirname + "/views"); // Setting the directory for the view files
+
+app.use(router); // Router Middleware
 
 app.listen(port, function () {
   //starts up the server on a specified port ('3000')

@@ -1,0 +1,13 @@
+<div id="languages">
+  <p class="w3-large w3-text-theme">
+      <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b>
+  </p>
+
+  <% for(let i =0; i<languages.length; i++){ %>
+    <p><%= languages[i]["name"] %></p>
+    <div class="w3-light-grey w3-round-xlarge">
+        <div class="w3-round-xlarge w3-teal" style="height: 24px;"><%= languages[i]["rate"] %>"></div>
+    </div>
+  <%}%>
+
+</div>
